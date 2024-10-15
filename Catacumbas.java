@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class Catacumbas extends MyWorld {
     private int etapaDialogo = 0;
-    private int etapaSegundoDialogo = 0; // Para controlar o segundo diálogo
+    private int etapaSegundoDialogo = 0; 
     private int cenarioCatacumba = 0;
     private boolean aguardandoResposta = false; 
 
@@ -77,14 +77,14 @@ public class Catacumbas extends MyWorld {
     
     public void escolherLutar() {
         caixa1.setTexto("Você escolheu lutar! Prepare-se para a batalha.");
-        Greenfoot.delay(100); // Pausa para mostrar a mensagem
-        mudarParaCenarioLuta(); // Transição para a batalha
+        Greenfoot.delay(100); 
+        mudarParaCenarioLuta(); 
     }
 
     public void escolherSeEsconder() {
         caixa1.setTexto("Você escolheu esconder-se!");
-        Greenfoot.delay(100); // Pausa para mostrar a mensagem
-        iniciarCenarioEsconder(); // Transição para a lógica de esconder
+        Greenfoot.delay(100); 
+        iniciarCenarioEsconder();
     }
     
     public void mudarParaCenarioLuta() {
