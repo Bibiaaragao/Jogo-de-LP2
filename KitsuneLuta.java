@@ -32,26 +32,25 @@ public class KitsuneLuta extends Actor {
         Aranhas aranha = (Aranhas) getOneIntersectingObject(Aranhas.class);
         if (aranha != null && checkPixelCollision(aranha)) {
             getWorld().removeObject(aranha);
-            causarDano(10); // Remove a aranha se houver colisão
+            causarDano(10); 
         }
 
         if (cooldownDanoKitsune > 0) {
-            cooldownDanoKitsune--;  // Decrementa o cooldown de dano à Kitsune
+            cooldownDanoKitsune--;  
         }
 
         Esqueleto esqueleto = (Esqueleto) getOneIntersectingObject(Esqueleto.class);
         if (esqueleto != null && checkPixelCollision(esqueleto) && cooldownDanoKitsune <= 0) {
-            causarDano(15); // Causa dano ao esqueleto
-            cooldownDanoKitsune = 60; // Reseta o cooldown
+            causarDano(15); 
+            cooldownDanoKitsune = 60; 
         }
 
-        // Atualiza a posição da barra de vida
         barraVida.setLocation(getX(), getY() - 10);
     }
 
     public void addedToWorld(World world) {
         if (world != null) {
-            world.addObject(barraVida, getX(), getY() - 10); // Coloca a barra acima da Kitsune
+            world.addObject(barraVida, getX(), getY() - 10); 
         }
     }
 
@@ -85,20 +84,20 @@ public class KitsuneLuta extends Actor {
 
     public void causarDano(int dano) {
         if (getWorld() == null) {
-            return; // Verifica se a Kitsune ainda está no mundo antes de realizar ações
+            return; 
         }
 
         vida -= dano; 
         if (vida < 0) {
-            vida = 0; // Garante que a vida não fique negativa
-            barraVida.atualizarVida(vida); // Atualiza a barra de vida antes de remover
+            vida = 0; 
+            barraVida.atualizarVida(vida); 
              
         } else {
-            barraVida.atualizarVida(vida); // Atualiza a barra de vida com a nova quantidade de vida
+            barraVida.atualizarVida(vida); 
         }
     }
 
     public int getVida() {
-        return vida; // Para verificar a vida restante, se necessário
+        return vida; 
     }
 }
