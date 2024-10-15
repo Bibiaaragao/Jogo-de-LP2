@@ -15,13 +15,12 @@ public class CenarioEsconder extends MyWorld
      */
     public CenarioEsconder()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(); 
         prepare();
     }
     
     public void prepare(){
-        Kitsune6 kitsune6 = new Kitsune6();  // Cria uma nova instância de Kitsune4
+        Kitsune6 kitsune6 = new Kitsune6();  
         addObject(kitsune6, 125, 251);    
         
         iniciarDialogo();
@@ -47,20 +46,20 @@ public class CenarioEsconder extends MyWorld
             case 5:
                 caixa1.setTexto("Voz Misteriosa: Então vá, apressse-se!     (clique aqui para avançar)");
                 break;
-            case 6: // Após o diálogo, aparecem os botões
-                return; // Saímos do switch para evitar outro incremento
+            case 6: 
+                return; 
         }
-        etapaDialogo++; // Progredir para a próxima parte do diálogo
-        Greenfoot.delay(100); // Pausa para dar tempo ao jogador de ler
+        etapaDialogo++; 
+        Greenfoot.delay(100); 
     }
     
     public void act() {
-        if (Greenfoot.mouseClicked(null)) { // Verifica se houve um clique do mouse em qualquer lugar
-            iniciarDialogo(); // Avança o diálogo
+        if (Greenfoot.mouseClicked(null)) {
+            iniciarDialogo(); 
         }
     }
     
     public void dentroCaixao() {
-        Greenfoot.setWorld(new TelaPreta()); // Muda para a tela preta
+        Greenfoot.setWorld(new TelaPreta()); 
     }
 }
