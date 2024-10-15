@@ -23,7 +23,7 @@ public class BracoEspada extends Actor {
         }
         
         if(Greenfoot.isKeyDown("left")) {
-            move(-5); // Ajuste a velocidade conforme necessário
+            move(-5); 
         }
         if(Greenfoot.isKeyDown("right")) {
             move(5);
