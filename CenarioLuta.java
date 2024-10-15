@@ -9,22 +9,22 @@ import java.util.List;
 public class CenarioLuta extends World {
     private KitsuneLuta kitsuneLuta;
     public BracoEspada bracoEspada;
-    private int numeroDeEsqueletos = 20; // Número máximo de esqueletos
-    private int contagemEsqueletos = 0; // Contador de esqueletos criados
+    private int numeroDeEsqueletos = 20; 
+    private int contagemEsqueletos = 0; 
     private int intervaloEsqueletos = 120; // Intervalo de 2 segundos (120 frames)
     private int temporizadorEsqueletos = 0;
     private int alturaEsqueleto = 300; // Coordenada Y fixa para os esqueletos
     private int limiteAranhas = 4; // Limite máximo de aranhas simultâneas
-    private int intervaloAranhas = 120; // Intervalo de 3 segundos (180 frames)
+    private int intervaloAranhas = 120; 
     private int temporizadorAranhas = 0;
 
     public CenarioLuta() {
         super(600, 400, 1);
         kitsuneLuta = new KitsuneLuta();
         bracoEspada = new BracoEspada();
-        addObject(kitsuneLuta, 100, 285); // Posicione conforme necessário
+        addObject(kitsuneLuta, 100, 285); 
         addObject(bracoEspada, 138, 345);
-        adicionarEsqueleto(); // Adiciona um esqueleto inicial
+        adicionarEsqueleto(); 
     }
 
     public void act() {
@@ -34,7 +34,7 @@ public class CenarioLuta extends World {
         // Verifica se é hora de criar um novo esqueleto e se ainda pode criar mais
         if (temporizadorEsqueletos >= intervaloEsqueletos && contagemEsqueletos < numeroDeEsqueletos) {
             adicionarEsqueleto();
-            contagemEsqueletos++; // Incrementa o número de esqueletos adicionados
+            contagemEsqueletos++; 
             temporizadorEsqueletos = 0; // Reseta o temporizador
         }
 
@@ -46,15 +46,15 @@ public class CenarioLuta extends World {
 
         // Verifica se a Kitsune ainda está no mundo
         if (getObjects(KitsuneLuta.class).isEmpty()) {
-            return; // Se a Kitsune não estiver mais no mundo, não faça mais nada
+            return; 
         }
         
         if (kitsuneLuta.getWorld() == null || kitsuneLuta.getVida() <= 0) {
-            gameOver(); // Chama o Game Over
+            gameOver(); 
         }
         
         if (getObjects(Esqueleto.class).isEmpty()) {
-            mudarParaSegundaCatacumba(); // Chama a função para mudar para a segunda catacumba
+            mudarParaSegundaCatacumba();
         }
     }
 
@@ -75,7 +75,6 @@ public class CenarioLuta extends World {
     }
 
     public void gameOver() {
-        // Define o fundo de Game Over
         setBackground("gameOver.jpeg");
 
         // Remove todos os objetos da classe Spider e KitsuneLuta
@@ -99,7 +98,7 @@ public class CenarioLuta extends World {
     }
     
     private void mudarParaSegundaCatacumba() {
-        Greenfoot.setWorld(new SegundaCatacumbas()); // Muda para a Segunda Catacumba
+        Greenfoot.setWorld(new SegundaCatacumbas()); 
     }
     
 }
