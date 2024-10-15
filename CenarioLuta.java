@@ -77,10 +77,8 @@ public class CenarioLuta extends World {
     public void gameOver() {
         setBackground("gameOver.jpeg");
 
-        // Remove todos os objetos da classe Spider e KitsuneLuta
         KitsuneLuta kitsune = (KitsuneLuta) getObjects(KitsuneLuta.class).get(0);
         if (kitsune != null) {
-            // Remove a Kitsune do mundo
             removeObject(kitsune);
         }
         removeObjects(getObjects(Aranhas.class));
@@ -89,9 +87,9 @@ public class CenarioLuta extends World {
         for (Esqueleto esqueleto : esqueletos) {
             BarraVidaEsqueleto barraVida = esqueleto.getBarraVida();
             if (barraVida != null) {
-                removeObject(barraVida); // Remove a barra de vida se existir
+                removeObject(barraVida); 
             }
-            removeObject(esqueleto); // Remove o esqueleto
+            removeObject(esqueleto); 
         }
 
         Greenfoot.stop();
