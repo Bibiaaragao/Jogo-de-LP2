@@ -25,10 +25,10 @@ public class BarraVidaKitsune extends Actor
     }
 
     private void atualizarImagem() {
-        // Aqui você pode desenhar a barra de vida
-        GreenfootImage img = new GreenfootImage(100, 10); // Por exemplo, uma barra de 100x10 pixels
-        img.setColor(Color.RED); // Cor da barra
-        img.fillRect(0, 0, vida, 10); // Preenche a barra com a vida
+        
+        GreenfootImage img = new GreenfootImage(100, 10); 
+        img.setColor(Color.RED); 
+        img.fillRect(0, 0, vida, 10); 
         setImage(img);
     }
     
