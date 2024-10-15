@@ -20,10 +20,9 @@ public class SegundaCatacumbas extends MyWorld
     }
     
     public void prepare() {
-        // Aqui você pode adicionar a Kitsune6 ou outros objetos relevantes
         Kitsune6 kitsune6 = new Kitsune6(); 
-        addObject(kitsune6, 125, 251); // Adiciona a nova Kitsune ao cenário
-        iniciarDialogo(); // Inicia o diálogo
+        addObject(kitsune6, 125, 251); 
+        iniciarDialogo(); 
     }
 
     public void iniciarDialogo() {
@@ -75,17 +74,17 @@ public class SegundaCatacumbas extends MyWorld
                 break;
             case 15:
                 caixa1.setTexto("Pista: Uma garrafa de futuro e uma garrafa de passado são mantidos em um beijo que os mantém\n unidos. Quando um deles pega, o outro dá e então eles trocam de lugar enquanto cada um vive.");
-                break; // Retorna para evitar incremento
+                break; 
         }
-        etapaSegundoDialogo++; // Progride para a próxima parte do diálogo
-        Greenfoot.delay(100); // Pausa para dar tempo ao jogador de ler
+        etapaSegundoDialogo++;
+        Greenfoot.delay(100);
     }
 
     public void act() {
-        if (Greenfoot.mouseClicked(null)) { // Verifica se houve um clique do mouse em qualquer lugar
+        if (Greenfoot.mouseClicked(null)) { 
             if (!aguardandoResposta) {
-                if (etapaSegundoDialogo < 16) { // Se ainda não chegou ao final do diálogo
-                    iniciarDialogo(); // Avança o diálogo
+                if (etapaSegundoDialogo < 16) { 
+                    iniciarDialogo();
                 }
             }
         }
@@ -118,11 +117,11 @@ public class SegundaCatacumbas extends MyWorld
         }
         showText("Senha correta! Pode passar.", 300, 200);
         Greenfoot.delay(180);
-        terceiraFase(); // Chama o terceiro cenário após resposta correta
+        terceiraFase(); 
     }
 
     public void terceiraFase() {
-        // Aqui você pode mudar para o terceiro cenário do jogo
-        Greenfoot.setWorld(new SalaTesouro()); // Altere para a nova classe do terceiro cenário
+       
+        Greenfoot.setWorld(new SalaTesouro()); 
     }
 }
