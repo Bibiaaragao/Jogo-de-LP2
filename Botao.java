@@ -8,11 +8,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Botao extends Actor {
     private String texto;
-    private Runnable acao; // Usaremos uma interface funcional para armazenar a ação
-
+    private Runnable acao; 
     public Botao(String texto) {
         this.texto = texto;
-        setImage(new GreenfootImage(texto, 24, Color.WHITE, Color.BLACK)); // Cria a imagem do botão
+        setImage(new GreenfootImage(texto, 24, Color.WHITE, Color.BLACK)); 
     }
 
     public void setOnClick(Runnable acao) {
@@ -22,7 +21,7 @@ public class Botao extends Actor {
     public void act() {
         if (Greenfoot.mouseClicked(this)) { 
             if (acao != null) {
-                acao.run(); // Executa a ação definida
+                acao.run(); 
             }
         }
     }
