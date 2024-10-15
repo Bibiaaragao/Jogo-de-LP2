@@ -29,8 +29,8 @@ public class Kitsune6 extends Actor
     
     private void verificarLimite() {
          if (getX() >= getWorld().getWidth() - 5) { 
-             ((CenarioEsconder)getWorld()).dentroCaixao(); // Chama o método dentroCaixao()
-                getWorld().removeObject(this); // Remove a Kitsune do cenário
+             ((CenarioEsconder)getWorld()).dentroCaixao(); 
+                getWorld().removeObject(this); 
         }
         
     }
