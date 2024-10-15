@@ -12,11 +12,11 @@ public class Esqueleto extends Actor {
     private BarraVidaEsqueleto barraVida;
 
     public Esqueleto() {
-        barraVida = new BarraVidaEsqueleto(vida); // Cria a barra de vida
+        barraVida = new BarraVidaEsqueleto(vida); 
     }
 
     public void act() {
-        moverParaKitsune(); // Continua seguindo a Kitsune
+        moverParaKitsune(); 
 
         if (cooldownDano > 0) {
             cooldownDano--;
@@ -48,18 +48,16 @@ public class Esqueleto extends Actor {
     public void receberDano() {
         if (getWorld() != null && cooldownDano <= 0) {
             if (vida > 0) {
-                vida--; // Reduz a vida do esqueleto
+                vida--; 
     
                 if (vida > 0) {
                     barraVida.atualizarBarra(vida); 
                 } else {
-                    // Primeiro, remova a barra de vida antes de remover o esqueleto
                     if (barraVida.getWorld() != null) {
-                        getWorld().removeObject(barraVida); // Remove a barra de vida do mundo
+                        getWorld().removeObject(barraVida); 
                     }
-                    // Agora remova o esqueleto, garantindo que o getWorld não é null
-                    if (getWorld() != null) {
-                        getWorld().removeObject(this); // Remove o esqueleto do mundo
+                    
+                    if (getWorld() != null) { // Remove o esqueleto do mundo
                     }
                 }
             }
