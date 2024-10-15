@@ -22,11 +22,10 @@ public class BarraVidaEsqueleto extends Actor {
     }
 
     private void atualizarBarra() {
-        // Cria uma nova imagem para a barra
         GreenfootImage barra = new GreenfootImage(larguraMaxima, altura);
-        barra.setColor(Color.RED); // Cor da barra
-        int larguraAtual = (int) (larguraMaxima * (vidaAtual / 3.0)); // Largura proporcional à vida
-        barra.fillRect(0, 0, larguraAtual, altura); // Preencher a barra com a largura atual
-        setImage(barra); // Define a imagem da barra para o ator
+        barra.setColor(Color.RED);
+        int larguraAtual = (int) (larguraMaxima * (vidaAtual / 3.0)); 
+        barra.fillRect(0, 0, larguraAtual, altura);
+        setImage(barra);
     }
 }
