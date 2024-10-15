@@ -11,7 +11,7 @@ public class Catacumbas extends MyWorld {
     private int etapaDialogo = 0;
     private int etapaSegundoDialogo = 0; // Para controlar o segundo diálogo
     private int cenarioCatacumba = 0;
-    private boolean aguardandoResposta = false; // Para controlar se está aguardando a resposta da senha
+    private boolean aguardandoResposta = false; 
 
     public Catacumbas() {    
         super(); 
@@ -21,7 +21,7 @@ public class Catacumbas extends MyWorld {
     public void prepare() {
         Kitsune4 kitsune4 = new Kitsune4();  
         addObject(kitsune4, 125, 251);    
-        iniciarDialogo(); // Inicia o primeiro diálogo
+        iniciarDialogo(); 
     }
     
     public void iniciarDialogo() {
@@ -45,17 +45,17 @@ public class Catacumbas extends MyWorld {
                 caixa1.setTexto("Voz Misteriosa: Me ouça, te darei duas opções: Lutar ou esconder-se! (clique aqui para avançar)");
                 break;
             case 6:
-                apresentarOpcoes(); // Após o diálogo, aparecem os botões
-                return; // Saímos do switch para evitar outro incremento
+                apresentarOpcoes(); 
+                return; 
         }
-        etapaDialogo++; // Progredir para a próxima parte do diálogo
-        Greenfoot.delay(100); // Pausa para dar tempo ao jogador de ler
+        etapaDialogo++; 
+        Greenfoot.delay(100); 
     }
     
     public void act() {
-        if (Greenfoot.mouseClicked(null)) { // Verifica se houve um clique do mouse em qualquer lugar
-                if (etapaDialogo < 7) { // Se ainda não chegou ao final do primeiro diálogo
-                    iniciarDialogo(); // Avança o diálogo
+        if (Greenfoot.mouseClicked(null)) { 
+                if (etapaDialogo < 7) { 
+                    iniciarDialogo(); 
                 }
             
         }
