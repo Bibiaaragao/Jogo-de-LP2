@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Botao
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Botao\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=texto
+comment1.target=Botao(java.lang.String)
+comment2.params=acao
+comment2.target=void\ setOnClick(java.lang.Runnable)
+comment3.params=
+comment3.target=void\ act()
+numComments=4

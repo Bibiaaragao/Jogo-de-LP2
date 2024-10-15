@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Esqueleto
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Esqueleto\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=Esqueleto()
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ moverParaKitsune()
+comment4.params=
+comment4.target=void\ receberDano()
+comment5.params=
+comment5.target=int\ getVida()
+comment6.params=
+comment6.target=BarraVidaEsqueleto\ getBarraVida()
+numComments=7

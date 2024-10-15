@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=BarraVidaEsqueleto
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ BarraVidaEsqueleto\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=vida
+comment1.target=BarraVidaEsqueleto(int)
+comment2.params=vida
+comment2.target=void\ atualizarBarra(int)
+comment3.params=
+comment3.target=void\ atualizarBarra()
+numComments=4
