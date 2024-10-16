@@ -59,7 +59,4 @@ public class CenarioEsconder extends MyWorld
         }
     }
     
-    public void dentroCaixao() {
-        Greenfoot.setWorld(new TelaPreta()); 
-    }
 }
