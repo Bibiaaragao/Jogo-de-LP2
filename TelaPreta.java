@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TelaPreta extends MyWorld
+public class TelaPreta extends World
 {
 
     /**
@@ -14,14 +14,16 @@ public class TelaPreta extends MyWorld
      * 
      */
     private int etapaDialogo = 0;
+    private CaixaTexto1 caixa;
 
     public TelaPreta() {
-        super(); 
+        super(600, 400, 1); 
         GreenfootImage background = new GreenfootImage(600, 400); 
         background.setColor(Color.BLACK);
         background.fill(); // Preenche a tela com preto
         setBackground(background);
-        
+        caixa = new CaixaTexto1();
+        addObject(caixa, 300, 50);
         iniciarDialogo();
     }
 
@@ -52,5 +54,6 @@ public class TelaPreta extends MyWorld
 
     public void gameOver() {
         setBackground("gameOver.jpeg");
+        removeObject(caixa);
     }
 }
