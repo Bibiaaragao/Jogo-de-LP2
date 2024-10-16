@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class HallEntrada extends World
 {
     private int tentativasErradas;
-    private final int maxTentativas = 15; 
+    private final int maxTentativas = 10; 
     private Carta[] cartas;
     private Carta cartaSelecionada1;
     private Carta cartaSelecionada2;
