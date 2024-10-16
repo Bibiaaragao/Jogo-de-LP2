@@ -16,6 +16,7 @@ public class Kitsune6 extends Actor
     public void act()
     {
         mover();
+        verificarLimite();
     }
     public void mover(){
          if (!noLimiteDireito) {
@@ -29,8 +30,8 @@ public class Kitsune6 extends Actor
     
     private void verificarLimite() {
          if (getX() >= getWorld().getWidth() - 5) { 
-             ((CenarioEsconder)getWorld()).dentroCaixao(); 
-                getWorld().removeObject(this); 
+            Greenfoot.setWorld(new TelaPreta());  
+            getWorld().removeObject(this);        
         }
         
     }
